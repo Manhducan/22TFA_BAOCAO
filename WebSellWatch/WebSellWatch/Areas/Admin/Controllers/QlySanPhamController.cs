@@ -117,8 +117,6 @@ namespace WebSellWatch.Areas.Admin.Controllers
                 sp.Anh3 = fileUpload3.FileName;
                 //sp.NgayCapNhat = DateTime.Now;
                 sp.MaNSX = mansx;
-                String linkwweb = "https://i.9mobi.vn/cf/images/2015/03/nkk/nhung-hinh-anh-dep-19.jpg";
-                //  string anh = MapURL(path);
            
                 db.SANPHAMs.Add(sp);
 
@@ -148,7 +146,7 @@ namespace WebSellWatch.Areas.Admin.Controllers
                 TempData["kthanhcong"] = "Thêm sản phẩm thất bại";
             return RedirectToAction("QuanLySanPham");
         }
-        // 105856808746192/photos? message = "dshakjdhsjkadhjksad" & link = https://giabaoluxury.com/dong-ho-hublot-chinh-hang&url=https://bizweb.dktcdn.net/thumb/2048x2048/100/175/988/files/dsc06221.jpg
+ 
        
         public async Task<string> PublishMessage(string tensp, string anh)
         {
@@ -176,44 +174,6 @@ namespace WebSellWatch.Areas.Admin.Controllers
             }
 
         }
-
-       /* public static void uploadImage(string imagePath)
-        {
-            try
-            {
-                var uploadParams = new ImageUploadParams()
-                {
-                    File = new FileDescription(imagePath)
-                };
-
-                var uploadResult = cloudinary.Upload(uploadParams);
-                string link = uploadResult?.SecureUri?.AbsoluteUri;
-                Console.WriteLine("[Image was uploaded successfully]");
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }*/
-
-        /*public string ImageToBase64(string path)
-        {
-            // string path = "D:\SampleImage.jpg";
-            using (System.Drawing.Image image = System.Drawing.Image.FromFile(path))
-            {
-                using (MemoryStream m = new MemoryStream())
-                {
-                    image.Save(m, image.RawFormat);
-                    byte[] imageBytes = m.ToArray();
-                    string base64String = Convert.ToBase64String(imageBytes);
-                    String url = "data:image/png;base64," + base64String;
-                    return url;
-                }
-            }
-        }*/
-
-
 
 
         //Chỉnh sửa sản phẩm
