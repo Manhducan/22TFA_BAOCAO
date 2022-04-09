@@ -1,0 +1,213 @@
+﻿@model IEnumerable<WebSellWatch.Models.DONHANG>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2>STATISTICAL </h2>
+<hr />
+<!-- /.row -->
+<div class="row" >
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge"><h5>@string.Format("{0:0,0}", @TempData["TongDoanhThu"]) VNĐ</h5></div>
+                        <br />
+                        <div>Total revenue</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    @Html.ActionLink("Detail", "DanhSachDonHang", "QlyDonHang")
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-user fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@TempData["TongKhachHang"]</div>
+                        <div>Member</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    @Html.ActionLink("Detail", "DanhSachKhachHang", "QlyKhachHang")
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@TempData["DonHangChuaDuyet"]</div>
+                        <div>New orders!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    @Html.ActionLink("Detail", "DanhSachChuaDuyet", "QlyDonHang")
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-truck fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">@TempData["DonHangChoGiao"]</div>
+                        <div>Delivering!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">
+                <div class="panel-footer">
+                    @Html.ActionLink("Detail", "DonHangChoGiao", "QlyDonHang")
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<br />
+<div class="panel-heading">
+    <div class="col-lg-12">
+        <div class="col-lg-4">
+            @using (Html.BeginForm("TKDoanhThuTheoNgay", "ThongKe", FormMethod.Get, new { @class = "col-lg-12" }))
+            {
+            <h4>Revenue by day: </h4>
+                if (TempData["DoanhThuTheoNgay"] == null)
+                {
+                    TempData["DoanhThuTheoNgay"] = "0";
+                }
+                @Html.TextBox("NgayA", TempData["NgayA"], "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+                @Html.TextBox("NgayB", TempData["NgayB"], "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+                <div class="form-control">@string.Format("{0:0,0}", TempData["DoanhThuTheoNgay"]) VNĐ</div>
+                <button type="submit" class="btn btn-danger form-control">Calculate</button>
+            }
+        </div>
+        <div class="col-lg-6">
+            <img src="~/Content/Image/rolex1.jpg" alt="" width="650" height="350">
+        </div>
+    </div>
+</div>
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayDat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayGiao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DCGiao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongTien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TinhTrang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThanhToan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoTen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KHACHHANG.TenKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHANVIEN.TenNV)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayGiao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DCGiao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TongTien)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TinhTrang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThanhToan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoTen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KHACHHANG.TenKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NHANVIEN.TenNV)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaDH }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaDH }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaDH })
+                </td>
+            </tr>
+        }
+
+    </table>*@
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>

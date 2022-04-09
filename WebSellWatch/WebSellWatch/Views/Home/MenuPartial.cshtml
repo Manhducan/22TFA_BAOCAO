@@ -1,0 +1,53 @@
+﻿<link href="~/Content/themify-icons/themify-icons.css" rel="stylesheet" />
+<div class="header_agileits">
+    
+    <div class="overlay overlay-contentpush">
+        <button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "active" })</li>
+                <li>@Html.ActionLink("Watches", "Index", "CuaHang", null, new { @class = "active" })</li>
+                @if (Session["Userkh"] != null)
+                {
+                    <li>Wellcome @Session["Userkh"].ToString()</li>
+                    <li>@Html.ActionLink("Log Out", "DangXuat", "KhachHang", null, new { @class = "active" })</li>
+                    <li>@Html.ActionLink("Change information", "Edit", "KhachHang", null, new { @class = "active" })</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Log in", "DangNhap", "KhachHang", null, new { @class = "active" })</li>
+                    <li>@Html.ActionLink("Registration", "DangKy", "KhachHang", null, new { @class = "active" })</li>
+                }
+                <li>@Html.ActionLink("Our World", "", "", null, new { @class = "active" })</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile-nav-button">
+        <button id="trigger-overlay" type="button"><i class="fa ti-menu" aria-hidden="true"></i></button>
+    </div>
+    <!-- cart details -->
+    @*Chèn giỏi hàng partial*@
+    
+    <!-- //cart details -->
+    <!-- search -->
+    <div class="search_w3ls_agileinfo">
+        <div class="cd-main-header">
+            <ul class="cd-header-buttons">
+                <li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
+            </ul>
+        </div>
+        <div id="cd-search" class="cd-search">
+            @using (Html.BeginForm("KQTimKiem", "TimKiem", FormMethod.Post))
+            {
+                <input name="txtTimKiem" type="search" placeholder="Nhập từ khóa cần tìm...">
+            }
+        </div>
+        
+    </div>
+    <!-- //search -->
+    <br />
+    <div>@ViewBag.TenKH </div>
+
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSellWatch", "WebSellWatch\WebSellWatch.csproj", "{617C0583-6A75-48B4-B970-497479B315BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{617C0583-6A75-48B4-B970-497479B315BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617C0583-6A75-48B4-B970-497479B315BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617C0583-6A75-48B4-B970-497479B315BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617C0583-6A75-48B4-B970-497479B315BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11BAE2EC-1E15-4930-B944-84CE880D0B5D}
+	EndGlobalSection
+EndGlobal

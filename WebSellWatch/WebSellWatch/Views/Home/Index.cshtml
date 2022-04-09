@@ -1,0 +1,527 @@
+﻿<link href="~/Content/themify-icons/themify-icons.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+<head>
+    <link rel="shortcut icon" href="~/new/images/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/new/css/bootstrap.css" />
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- font awesome style -->
+    <link href="~/new/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/new/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/new/css/responsive.css" rel="stylesheet" />
+    <!-- jQery -->
+    <script src="~/new/js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap js -->
+    <script src="~/new/js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- custom js -->
+    <script src="~/new/js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<!-- banner -->
+<div class="banner_top" id="home">
+    <div class="wrapper_top_w3layouts">
+        @Html.Partial("~/Views/Home/MenuPartial.cshtml")
+
+    </div>
+
+</div>
+<body class="sub_page">
+    <section class="slider_section ">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h1>
+                                        Beemo Store
+                                    </h1>
+                                    <p>
+                                        Nhà phân phối độc quyền các thương hiệu đồng hồ, nổi tiếng thế giới: Hublot, ROLEX, CHOPARD,Apple Watch, Jacques Lemans, Citizen, Aries Gold, dây da đồng hồ, dây đồng hồ đeo tay....
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="@Url.Action("Index","CuaHang")" class="btn1">
+                                            Xem Sản Phẩm
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="~/new/images/slider-2m.png" alt="" width="986" height="579">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h1>
+                                        Beemo Store
+                                    </h1>
+                                    <p>
+                                        Thời gian của bạn là hữu hạn, vì thế đừng lãng phí nó để sống cuộc đời của người khác.
+                                    </p>
+                                    <p>Steve Jobs</p>
+                                    <div class="btn-box">
+                                        <a href="@Url.Action("Index","CuaHang")" class="btn1">
+                                            Xem Sản Phẩm
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="~/new/images/slider-2.png" alt="" width="986" height="579">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="container-fluid ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-box">
+                                    <h1>
+                                        Beemo Store
+                                    </h1>
+                                    <p>
+                                        Trang sức chẳng bao giờ thực sự hút mắt tôi, nhưng đồng hồ thì luôn luôn làm tôi chú ý.
+                                    </p>
+                                    <p>Clive Owen</p>
+                                    <div class="btn-box">
+                                        <a href="@Url.Action("Index","CuaHang")" class="btn1">
+                                            Xem Sản Phẩm
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-box">
+                                    <img src="~/new/images/slider-img.png" alt="" width="986" height="579">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                <li data-target="#customCarousel1" data-slide-to="1"></li>
+                <li data-target="#customCarousel1" data-slide-to="2"></li>
+            </ol>
+        </div>
+
+    </section>
+    <section class="shop_section layout_padding">
+        <div class="container">
+            <div col-lg-4 col-md-4 col-sm-4 col-xs-12>
+                <h1 style="text-align: center">HUBLOT</h1>
+                <div class="col-md-4 product-men women_two box">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item ">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/hublot1.jpg" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=1&amp;mansx=2" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                                <div class="new">
+                                    <span>
+                                        New
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a title="HUBLOT CLASSIC FUSION BLUE TITANIUM 45MM" href="/SanPham/XemChiTiet?masp=1&amp;mansx=2">HUBLOT CLASSIC FUSI...</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">154.000.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men women_two box">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/Big-Bang1.png" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=2&amp;mansx=2" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                                <div class="new">
+                                    <span>
+                                        New
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a title="MP-09 TOURBILLON BI-AXIS BLUE 3D CARBON " href="/SanPham/XemChiTiet?masp=2&amp;mansx=2">MP-09 TOURBILLON BI...</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">4.300.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men women_two box">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/hublot-2a.jpg" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro ">
+                                        <a href="/SanPham/XemChiTiet?masp=5&amp;mansx=2" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                                <div class="new">
+                                    <span>
+                                        New
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a href="/SanPham/XemChiTiet?masp=5&amp;mansx=2">Big Bang Unico Sang Bleu II</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">585.000.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div col-lg-4 col-md-4 col-sm-4 col-xs-12>
+                <h1 style="text-align: center">ROLEX</h1>
+                <div class="col-md-4 product-men women_two">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/rolex-3.png" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=7&amp;mansx=2" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a title="ROLEX OYSTER PERPETUAL178274-0086 DATEJUST 31" href="/SanPham/XemChiTiet?masp=7&amp;mansx=2">HUBLOT CLASSIC FUSI...</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">250.000.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men women_two">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/rolex2.png" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=8&amp;mansx=2" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a title="ROLEX OYSTER PERPETUAL 118139-0004 DAY-DATE 36 " href="/SanPham/XemChiTiet?masp=8&amp;mansx=2">MP-09 TOURBILLON BI...</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">250.000.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men women_two">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/rolex-1.png" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=6&amp;mansx=2" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a href="/SanPham/XemChiTiet?masp=6&amp;mansx=2">Montblanc Heritage 112648 Chronométrie Automatic 43</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">100.000.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div col-lg-4 col-md-4 col-sm-4 col-xs-12>
+                <h1 style="text-align: center">CHOPARD</h1>
+                <div class="col-md-4 product-men women_two">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/chopard-1.jpg" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=9&amp;mansx=4" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a title="CHOPARD IMPERIALE 384242-5006 18K OSE AND DIAMONDS 36" href="/SanPham/XemChiTiet?masp=9&amp;mansx=4">HUBLOT CLASSIC FUSI...</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">1.071.720.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men women_two">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/chopard-2.jpg" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=10&amp;mansx=4" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a title="CHOPARD L.U.C XP URUSHI 161902-5049 WATCH 39.5" href="/SanPham/XemChiTiet?masp=10&amp;mansx=4">MP-09 TOURBILLON BI...</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">255.040.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 product-men women_two">
+                    <div class="product-shoe-info shoe">
+                        <div class="men-pro-item">
+                            <div class="men-thumb-item">
+                                <img width="200" height="400" src="/HinhAnh/HinhAnhSP/chopard-3.png" alt="">
+                                <div class="men-cart-pro">
+                                    <div class="inner-men-cart-pro">
+                                        <a href="/SanPham/XemChiTiet?masp=11&amp;mansx=4" class="link-product-add-cart">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-info-product">
+                                <h4>
+                                    <a href="/SanPham/XemChiTiet?masp=11&amp;mansx=4">CHOPARD ICE CUBE 104015-1001 WATCH 36</a>
+                                </h4>
+                                <div class="info-product-price">
+                                    <div class="grid_meta">
+                                        <div class="product_price">
+                                            <div class="grid-price ">
+                                                <span class="money ">849.420.000 VNĐ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box col-md-12 ">
+                <a href="@Url.Action("Index","CuaHang")">
+                    View All
+                </a>
+            </div>
+            <div class="col-md-12 ">
+                <section class="client_section layout_padding">
+                    <div class="container">
+                        <div class="heading_container heading_center">
+                            <h2>
+                                Testimonial
+                            </h2>
+                        </div>
+                        <div class="carousel-wrap ">
+                            <div class="owl-carousel client_owl-carousel">
+                                <div class="item">
+                                    <div class="box">
+                                        <div class="img-box">
+                                            <img src="~/HinhAnh/hq.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="client_info">
+                                                <div class="client_name">
+                                                    <h5>
+                                                        Trần Hồng Quân
+                                                    </h5>
+                                                    <h6>
+                                                        Customer
+                                                    </h6>
+                                                </div>
+                                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+                                        <p>
+                                            Code 181 phút một ngày gây hại cho sức khoẻ
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="box">
+                                        <div class="img-box">
+                                            <img src="~/HinhAnh/manhngu.png" alt="">
+                                        </div>
+                                        <div class="detail-box">
+                                            <div class="client_info">
+                                                <div class="client_name">
+                                                    <h5>
+                                                        Phạm Hữu Mạnh
+                                                    </h5>
+                                                    <h6>
+                                                        Customer
+                                                    </h6>
+                                                </div>
+                                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                            </div>
+
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                            labore
+                                            et
+                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            cillum
+                                            dolore eu fugia
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+
+<!-- jQery -->
+<script src="~/new/js/jquery-3.4.1.min.js"></script>
+<!-- popper js -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<!-- bootstrap js -->
+<script src="~/new/js/bootstrap.js"></script>
+<!-- owl slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<!-- custom js -->
+<script src="~/new/js/custom.js"></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+<!-- End Google Map -->       <!-- //grids_bottom2-->
+<!-- /Properties -->

@@ -1,0 +1,7 @@
+dto.setMasp(rs.getInt("masp"));
+dto.setTensp(rs.getString("tensp"));
+dto.setAnh1(rs.getString("anh1"));
+dto.setMansx(rs.getInt("mansx"));
+dto.setDongia(rs.getDouble("dongia"));
+dto.setTrangthai(rs.getString("trangthai"));
+dto.setTennsx(rs.getString("tennsx"));

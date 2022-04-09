@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BeemoStore Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/Admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="~/Content/Admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="~/Content/Admin/dist/css/app.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="~/Content/Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-image:url('/Content/Image/background.jpg');">
+    <div class="form" id="signin-form">
+        <a href="#" class="form-logo">
+            <img src="~/Content/Image/logo1.png" alt="company logo">
+        </a>
+        <h3 style="color:deeppink">Login Admin</h3>
+        <h4>@ViewBag.ThongBao</h4>
+        <div class="panel-body">
+            @using (Html.BeginForm("Login", "Login"))
+            {
+            <div class="form_group">
+                <input class="form-control" placeholder="E-mail" name="txtemail" type="email" id="signin-email" />
+                <span class="form-input-icon err">
+                    <i class='bx bx-error-circle'></i>
+                </span>
+                <span class="form-input-icon success">
+                    <i class='bx bx-check-circle'></i>
+                </span>
+                <span class="form-input-err-msg" data-err-for="signin-email"></span>
+            </div>
+                    
+             <div class="form_group">
+                 <input class="form-control" placeholder="Mật khẩu" name="txtmatkhau" type="password" id="signin-password">
+                 <span class="form-input-icon err">
+                     <i class='bx bx-error-circle'></i>
+                 </span>
+                 <span class="form-input-icon success">
+                     <i class='bx bx-check-circle'></i>
+                 </span>
+                 
+                 <span class="form-input-err-msg" data-err-for="signin-password"></span>
+             </div>
+                    
+                
+                <input type="submit" value="Đăng nhập" class="form-control btn btn-success" id="signin-btn"/>
+            }
+        </div>
+    </div>
+
+    <!-- APP JS -->
+    <script src="./app.js"></script>
+
+    <!-- jQuery -->
+    <script src="~/Content/Admin/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/Admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Content/Admin/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Content/Admin/dist/js/sb-admin-2.js"></script>
+</body>
+</html>
+

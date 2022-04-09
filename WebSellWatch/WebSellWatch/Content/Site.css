@@ -1,0 +1,57 @@
+﻿body {
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.select-box1 {
+    margin: 20px 0;
+    text-align: center;
+    text-center;
+}
+.shop_section .btn-box a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #f0d43a;
+    color: #ffffff;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #f0d43a;
+}
+.shop_section .box .new {
+    padding: 7px 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f0d43a;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 15px;
+}
